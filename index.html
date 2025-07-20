@@ -53,27 +53,52 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Zero-Shot Composed Image Retrieval via Dual-Stream Instruction-Aware Distillation</h1>
+            <h2 class="subtitle is-3 has-text-centered">ICCV 2025</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                Wenliang Zhong<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Rob Barton<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Weizhi An<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Feng Jiang<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Hehuan Ma<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Yuzhi Guo<sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                Abhishek Dan<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Shioulin Sam<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Karim Bouyarmane<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Junzhou Huang<sup>1</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup> UT Arlington</span><br>
+              <span class="author-block"><sup>2</sup> Amazon</span>
+            </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                        <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://distillcir.github.io/" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,31 +107,20 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://distillcir.github.io/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Coming Soon)</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://distillcir.github.io/" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -122,33 +136,28 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
+<!-- Overview figure -->
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <figure class="image">
+          <img src="static/images/overview.png" alt="Overview of DistillCIR">
+        </figure>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Composed Image Retrieval (CIR) targets the retrieval of images conditioned on a reference image and a textual modification, but constructing labeled triplets (reference image, textual modification, target image) is inherently challenging. Existing Zero-Shot CIR (ZS-CIR) approaches often rely on well-aligned vision-language models (VLMs) to combine visual and textual inputs, or use large language models (LLMs) for richer modification understanding. While LLM-based methods excel in capturing textual details, they are computationally costly, slow to infer, and often restricted by proprietary constraints. In this paper, we argue that the superior performance of LLM-based ZS-CIR methods primarily stems from their capacity to follow instructions, an aspect largely missing in more efficient projection-based models built upon VLMs. To bridge this gap, we introduce DistillCIR, a dual-stream distillation framework that transfers LLMs’ instruction-following capability into compact, projection-based architectures. By synthesizing triplet data with an LLM and incorporating a novel reasoning process, DistillCIR learns both composed retrieval and instruction awareness. In addition, we train an open-source multimodal LLM on the generated data, and further distill its instruction-aware embeddings into the projection-based model. Without any reliance on LLMs at inference, DistillCIR significantly surpasses state-of-the-art ZS-CIR methods in both performance and efficiency, offering a promising direction for instruction-aware, lightweight CIR.
           </p>
         </div>
       </div>
@@ -157,110 +166,43 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Method figure -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>DistillCIR</strong> is a dual-stream distillation framework that transfers instruction-following capabilities from LLMs into lightweight, projection-based CIR models through three complementary training objectives:
+          </p>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+          <ol>
+            <li>
+              <strong>Triplet Supervision:</strong> We begin by converting standard image-caption datasets into a triplet format consisting of a reference image, a textual modification, and a modified caption. This synthetic data is used to train the projection-based model with a composed retrieval objective.
+            </li>
+            <li>
+              <strong>Reasoning Distillation:</strong> To capture deeper instruction understanding, we introduce a reasoning distillation objective. The model learns from the LLM’s step-by-step explanation of how the modification changes the original semantics.
+            </li>
+            <li>
+              <strong>Feature Distillation:</strong> We also train an open-source MLLM on the triplet data and use it as a teacher to transfer instruction-aware embeddings into the projection-based model through feature-level distillation.
+            </li>
+          </ol>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+          <p>
+            Together, these objectives enable <strong>DistillCIR</strong> to achieve strong instruction comprehension and state-of-the-art retrieval performance, without requiring any LLMs during inference.
+          </p>
         </div>
+        <figure class="image">
+          <img src="static/images/method.png" alt="Method of DistillCIR">
+        </figure>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,19 +212,37 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+<!-- Experiment figure -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <figure class="image">
+          <img src="static/images/results.png" alt="Experiments">
+        </figure>
+        <p class="has-text-centered is-size-6">Experiments of DistillCIR on CIRR and CIRCO</p>
+        <figure class="image">
+          <img src="static/images/visualization.png" alt="Visualization">
+        </figure>
+        <p class="has-text-centered is-size-6">Visualization of DistillCIR on CIRCO and FashionIQ</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>Coming Soon</code></pre>
+  </div>
 </section>
 <!--End BibTex citation -->
-
 
   <footer class="footer">
   <div class="container">
